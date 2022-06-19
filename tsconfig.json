@@ -22,6 +22,7 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
+      "@images/*": ["src/images/*"],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
     }
