@@ -8,6 +8,10 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      sm: "375px",
+      lg: "1440px",
+    },
     colors: {
       "transparent": "transparent",
       "light-background": "hsl(0, 0%, 98%)",
@@ -47,6 +51,9 @@ module.exports = {
       "88": "5.5rem",
       "92": "5.75rem",
       "96": "6rem",
+      "160": "10rem",
+      "230": "14.375rem",
+      "264": "16.5rem",
     },
     fontSize: {
       "12": ["0.75rem", { lineHeight: "1" }],
