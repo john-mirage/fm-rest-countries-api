@@ -16,10 +16,12 @@ module.exports = {
       "transparent": "transparent",
       "light-background": "hsl(0, 0%, 98%)",
       "light-surface": "hsl(0, 0%, 100%)",
+      "light-element": "hsl(0, 0%, 90%)",
       "light-text": "hsl(200, 15%, 8%)",
       "light-input": "hsl(0, 0%, 52%)",
       "dark-background": "hsl(207, 26%, 17%)",
       "dark-surface": "hsl(209, 23%, 22%)",
+      "dark-element": "hsl(209, 23%, 30%)",
       "dark-text": "hsl(0, 0%, 100%)",
       "dark-input": "hsl(0, 0%, 100%)",
     },
@@ -54,6 +56,7 @@ module.exports = {
       "92": "5.75rem",
       "96": "6rem",
       "160": "10rem",
+      "200": "12.5rem",
       "230": "14.375rem",
       "264": "16.5rem",
     },
@@ -77,6 +80,7 @@ module.exports = {
     borderRadius: {
       "2": "0.125rem",
       "6": "0.375rem",
+      "full": "9999px",
     },
     extend: {
       fontFamily: {

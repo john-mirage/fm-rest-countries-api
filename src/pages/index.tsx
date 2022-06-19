@@ -4,11 +4,23 @@ import CountriesViewSkeleton from "@components/countries-view-skeleton";
 import ErrorNotification from "@components/error-notification";
 import useCountries from "@hooks/use-countries";
 
-function HomePage() {
-  const { countries, isLoading, isError } = useCountries();
+function IndexPage() {
+  //const { countries, isLoading, isError } = useCountries();
 
   return (
     <>
+      <Head>
+        <title>REST Countries API</title>
+      </Head>
+      <CountriesViewSkeleton />
+    </>
+  );
+}
+
+export default IndexPage;
+
+/*
+<>
       <Head>
         <title>REST Countries API</title>
       </Head>
@@ -20,7 +32,5 @@ function HomePage() {
         <CountriesView />
       )}
     </>
-  );
-}
 
-export default HomePage;
+*/
