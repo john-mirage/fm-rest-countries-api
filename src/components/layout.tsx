@@ -4,7 +4,7 @@ function Layout({ children }) {
   return (
     <>
       <TopAppBar />
-      <main className="container px-16">{ children }</main>
+      <main className="mx-auto container px-16">{ children }</main>
     </>
   );
 }
