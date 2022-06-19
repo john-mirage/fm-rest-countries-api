@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 function Document() {
   return (
-    <Html lang="en" dir="ltr" data-theme="dark">
+    <Html lang="en" dir="ltr" data-theme="light">
       <Head>
         <meta charSet="UTF-8" />
         <link rel="icon" type="image/png" href="/src/assets/images/favicon.png"/>
@@ -22,7 +22,7 @@ function Document() {
         <meta property="twitter:description" content="Frontend mentor challenge solution for: REST Countries API"/>
         <meta property="twitter:image" content="https://john-mirage.github.io/rest-countries-api/preview.jpg"/>
       </Head>
-      <body>
+      <body className="bg-light-background dark:bg-dark-background">
         <Main />
         <NextScript />
       </body>
