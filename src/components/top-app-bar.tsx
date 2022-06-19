@@ -1,6 +1,6 @@
 import ThemeButton from "./theme-button";
 
-function Bar() {
+function TopAppBar() {
   return (
     <header className="flex justify-center items-center w-full h-76 bg-light-surface shadow dark:bg-dark-surface">
       <div className="container px-16 flex flex-row justify-between items-center">
@@ -11,4 +11,4 @@ function Bar() {
   );
 }
 
-export default Bar;
+export default TopAppBar;
