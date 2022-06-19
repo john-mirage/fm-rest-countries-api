@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     screens: {
       sm: "375px",
-      lg: "1440px",
+      lg: "1312px",
     },
     colors: {
       "transparent": "transparent",
@@ -59,6 +59,7 @@ module.exports = {
       "200": "12.5rem",
       "230": "14.375rem",
       "264": "16.5rem",
+      "480": "30rem",
     },
     fontSize: {
       "12": ["0.75rem", { lineHeight: "1" }],
@@ -76,6 +77,9 @@ module.exports = {
     },
     minWidth: {
       "96": "6rem",
+    },
+    minHeight: {
+      "336": "21rem",
     },
     borderRadius: {
       "2": "0.125rem",
