@@ -48,10 +48,19 @@ module.exports = {
       "92": "5.75rem",
       "96": "6rem",
     },
+    fontSize: {
+      "12": ["0.75rem", { lineHeight: "1" }],
+      "14": ["0.875rem", { lineHeight: "1" }],
+      "16": ["1rem", { lineHeight: "1" }],
+      "18": ["1.125rem", { lineHeight: "1" }],
+      "22": ["1.375rem", { lineHeight: "1" }],
+      "24": ["1.5rem", { lineHeight: "1" }],
+    },
     fontWeight: {
       "300": "300",
+      "400": "400",
       "600": "600",
-      "800": "800"
+      "700": "700",
     },
     extend: {
       fontFamily: {

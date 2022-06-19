@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-export default function Document() {
+function Document() {
   return (
     <Html lang="en" dir="ltr" data-theme="dark">
       <Head>
@@ -8,7 +8,7 @@ export default function Document() {
         <link rel="icon" type="image/png" href="/src/assets/images/favicon.png"/>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
         <meta name="title" content="REST Countries API"/>
         <meta name="description" content="Frontend mentor challenge solution for: REST Countries API"/>
         <meta property="og:type" content="website"/>
@@ -29,3 +29,5 @@ export default function Document() {
     </Html>
   )
 }
+
+export default Document;
