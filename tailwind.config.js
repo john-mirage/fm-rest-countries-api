@@ -16,7 +16,7 @@ module.exports = {
       "transparent": "transparent",
       "light-background": "hsl(0, 0%, 98%)",
       "light-surface": "hsl(0, 0%, 100%)",
-      "light-element": "hsl(0, 0%, 90%)",
+      "light-element": "hsl(0, 0%, 85%)",
       "light-text": "hsl(200, 15%, 8%)",
       "light-input": "hsl(0, 0%, 52%)",
       "dark-background": "hsl(207, 26%, 17%)",
