@@ -1,7 +1,9 @@
-function ToolBar() {
+import SearchBar from "./search-bar";
+
+function ToolBar({ countries }) {
   return (
-    <div>
-      
+    <div className="mb-32 lg:flex lg:flex-row lg:justify-between lg:items-center">
+      <SearchBar countries={countries} />
     </div>
   );
 }

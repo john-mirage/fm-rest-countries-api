@@ -10,10 +10,7 @@ import CardGroup from "@components/card-group";
 import Pagination from "@components/pagination";
 
 function IndexPage() {
-  //const { countries, isLoading, isError } = useCountries();
-
-  const isLoading = true;
-  const isError = false;
+  const { countries, isLoading, isError } = useCountries();
 
   return (
     <>
@@ -31,7 +28,7 @@ function IndexPage() {
         <ErrorNotification />
       ) : (
         <>
-          <ToolBar />
+          <ToolBar countries={countries} />
           <CardGroup />
           <Divider />
           <Pagination />
