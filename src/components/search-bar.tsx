@@ -1,21 +1,27 @@
-import { useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Combobox } from "@headlessui/react";
 import { SearchIcon } from "@heroicons/react/outline";
+import Fuse from "fuse.js";
+import { useRouter } from "next/router";
 
-const regions: string[] = [
-  "africa",
-  "america",
-  "asia",
-  "europe",
-  "oceania"
-];
+const fuse = new Fuse([], {
+  keys: ["name.common"]
+});
 
 function SearchBar({ countries }) {
-  const [selectedCountry, setSelectedCountry] = useState(regions[0]);
+  const router = useRouter();
   const [query, setQuery] = useState("");
 
-  function handleCombobox() {
+  useEffect(() => {
+    fuse.setCollection(countries);
+  }, []);
 
+  const filteredCountries = query === ""
+    ? countries
+    : fuse.search(query.toLowerCase()).map((result) => result.item);
+
+  function handleCombobox(country) {
+    router.push(`country/${country.cca3.toLowerCase()}`);
   }
 
   return (
@@ -30,13 +36,18 @@ function SearchBar({ countries }) {
         placeholder="Search a country"
         onChange={(event) => setQuery(event.target.value)}
       />
-      <Combobox.Options className="absolute -bottom-4 left-0 translate-y-full w-full h-400 overflow-auto px-24 py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
-        {countries.map((country) => (
+      <Combobox.Options className="absolute -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
+        {filteredCountries.map((country) => (
           <Combobox.Option
-            className="py-6 text-12 font-400 text-light-text dark:text-dark-text"
             key={country.cca3}
+            value={country}
+            as={Fragment}
           >
-            { country.name.common }
+            {({ active }) => (
+              <li className={`px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text ${active ? "bg-light-element dark:bg-dark-element" : ""}`}>
+                { country.name.common }
+              </li>
+            )}
           </Combobox.Option>
         ))}
       </Combobox.Options>
