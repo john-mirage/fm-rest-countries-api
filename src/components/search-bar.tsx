@@ -5,7 +5,7 @@ import Fuse from "fuse.js";
 import { useRouter } from "next/router";
 
 const fuse = new Fuse([], {
-  keys: ["name.common"]
+  keys: ["name"]
 });
 
 function SearchBar({ countries }) {
@@ -21,7 +21,7 @@ function SearchBar({ countries }) {
     : fuse.search(query.toLowerCase()).map((result) => result.item);
 
   function handleCombobox(country) {
-    router.push(`country/${country.cca3.toLowerCase()}`);
+    router.push(`country/${country.alpha3Code.toLowerCase()}`);
   }
 
   return (
@@ -36,16 +36,16 @@ function SearchBar({ countries }) {
         placeholder="Search a country"
         onChange={(event) => setQuery(event.target.value)}
       />
-      <Combobox.Options className="absolute -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
+      <Combobox.Options className="absolute z-50 -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
         {filteredCountries.map((country) => (
           <Combobox.Option
-            key={country.cca3}
+            key={country.alpha3Code}
             value={country}
             as={Fragment}
           >
             {({ active }) => (
               <li className={`px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text ${active ? "bg-light-element dark:bg-dark-element" : ""}`}>
-                { country.name.common }
+                { country.name }
               </li>
             )}
           </Combobox.Option>

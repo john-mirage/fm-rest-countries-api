@@ -4,11 +4,12 @@ import CountrySkeleton from "@components/skeleton/country-skeleton";
 import Country from "@components/country";
 import ErrorNotification from "@components/error-notification";
 import { useRouter } from "next/router";
+import useCountry from "@hooks/use-country";
 
 function CountryPage() {
   const router = useRouter();
-  const isLoading = true;
-  const isError = false;
+  const { name } = router.query;
+  const { country, isLoading, isError } = useCountry(name as string);
 
   function handleBackButton() {
     router.back();
@@ -17,7 +18,7 @@ function CountryPage() {
   return (
     <>
       <Head>
-        <title>REST Countries API - France</title>
+        <title>REST Countries API</title>
       </Head>
       <BackButton onClick={handleBackButton} />
       {isLoading ? (
@@ -25,7 +26,7 @@ function CountryPage() {
       ) : isError ? (
         <ErrorNotification />
       ) : (
-        <Country />
+        <Country country={country} />
       )}
     </>
   );
