@@ -33,13 +33,13 @@ function CardGroup({ countries }) {
       {filteredCountries && filteredCountries.map((country, index) => {
         if (index < (filteredCountries.length - 1) || page === pageTotal) {
           return (
-            <li key={country.alpha3Code}>
+            <li className="mb-40 lg:mb-[75px]" key={country.alpha3Code}>
               <Card country={country} />
             </li>
           );
         } else {
           return (
-            <InView key={country.alpha3Code} as="li" triggerOnce onChange={handleNextPage}>
+            <InView className="mb-40 lg:mb-[75px]" key={country.alpha3Code} as="li" triggerOnce onChange={handleNextPage}>
               <Card country={country} />
             </InView>
           );
