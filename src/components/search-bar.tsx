@@ -27,6 +27,7 @@ function SearchBar({ countries }) {
   return (
     <Combobox
       className="relative mb-40 w-full h-48 rounded-6 bg-light-surface shadow dark:bg-dark-surface lg:mb-0 lg:w-480"
+      value=""
       onChange={handleCombobox}
       as="div"
     >

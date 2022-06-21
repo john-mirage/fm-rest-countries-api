@@ -18,19 +18,9 @@ function CountrySkeleton() {
             <div className="mb-44 w-full h-14 rounded-full bg-light-element dark:bg-dark-element"></div>
           </div>
         </div>
-        <div className="lg:flex lg:flex-row lg:justify-start lg:items-center">
-          <div className="animate-pulse mb-20 w-full h-16 rounded-full bg-light-element dark:bg-dark-element lg:mb-0 lg:flex-none lg:mr-16 lg:w-128"></div>
-          <div className="-mx-5 -mb-10 flex flex-row flex-wrap justify-start items-center w-border-countries lg:flex-1">
-            <div className="mx-5 mb-10 flex w-96 h-28 rounded-2 shadow bg-light-surface dark:bg-dark-surface">
-              <div className="animate-pulse m-auto w-56 h-12 rounded-full bg-light-element dark:bg-dark-element"></div>
-            </div>
-            <div className="mx-5 mb-10 flex w-96 h-28 rounded-2 shadow bg-light-surface dark:bg-dark-surface">
-              <div className="animate-pulse m-auto w-56 h-12 rounded-full bg-light-element dark:bg-dark-element"></div>
-            </div>
-            <div className="mx-5 mb-10 flex w-96 h-28 rounded-2 shadow bg-light-surface dark:bg-dark-surface">
-              <div className="animate-pulse m-auto w-56 h-12 rounded-full bg-light-element dark:bg-dark-element"></div>
-            </div>
-          </div>
+        <div className="animate-pulse lg:flex lg:flex-row lg:justify-start lg:items-center">
+          <div className="mb-20 w-full h-16 rounded-full bg-light-element dark:bg-dark-element lg:mb-0 lg:flex-none lg:mr-16 lg:w-128"></div>
+          <div className="flex flex-row flex-wrap justify-start items-center w-full h-28 bg-light-element dark:bg-dark-element lg:flex-1"></div>
         </div>
       </div>
     </div>
