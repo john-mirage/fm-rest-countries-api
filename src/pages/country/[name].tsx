@@ -11,16 +11,12 @@ function CountryPage() {
   const { name } = router.query;
   const { country, isLoading, isError } = useCountry(name as string);
 
-  function handleBackButton() {
-    router.back();
-  }
-
   return (
     <>
       <Head>
         <title>REST Countries API</title>
       </Head>
-      <BackButton onClick={handleBackButton} />
+      <BackButton />
       {isLoading ? (
         <CountrySkeleton />
       ) : isError ? (

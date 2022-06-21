@@ -29,7 +29,7 @@ function IndexPage() {
       ) : (
         <>
           <ToolBar countries={countries} />
-          <CardGroup />
+          <CardGroup countries={countries} />
           <Divider />
           <Pagination />
         </>
