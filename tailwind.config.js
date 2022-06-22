@@ -69,6 +69,7 @@ module.exports = {
       "400": "25rem",
       "480": "30rem",
       "560": "35rem",
+      "568": "35.5rem",
       "60%": "60%",
       "border-countries": "calc(100% + 0.625rem)",
     },
