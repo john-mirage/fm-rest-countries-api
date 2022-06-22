@@ -7,7 +7,7 @@ function Layout({ children }) {
   return (
     <>
       <TopAppBar theme={theme} setTheme={setTheme} />
-      <main className="mx-auto container px-16 pb-60">{ children }</main>
+      <main className="mx-auto container px-16 pb-60 md:px-32">{ children }</main>
     </>
   );
 }

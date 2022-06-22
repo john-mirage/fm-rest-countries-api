@@ -29,17 +29,17 @@ function CardGroup({ countries }) {
   }
 
   return (
-    <ul className="flex flex-row flex-wrap justify-around lg:justify-between lg:items-stretch lg:-mb-[75px]">
+    <ul className="grid grid-cols-1 justify-items-center gap-40 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-72">
       {filteredCountries && filteredCountries.map((country, index) => {
         if (index < (filteredCountries.length - 1) || page === pageTotal) {
           return (
-            <li className="mb-40 lg:mb-[75px]" key={country.alpha3Code}>
+            <li className="w-full max-w-264" key={country.alpha3Code}>
               <Card country={country} />
             </li>
           );
         } else {
           return (
-            <InView className="mb-40 lg:mb-[75px]" key={country.alpha3Code} as="li" triggerOnce onChange={handleNextPage}>
+            <InView className="w-full max-w-264" key={country.alpha3Code} as="li" triggerOnce onChange={handleNextPage}>
               <Card country={country} />
             </InView>
           );

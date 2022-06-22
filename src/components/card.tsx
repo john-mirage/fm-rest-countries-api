@@ -4,11 +4,11 @@ const formatter = new Intl.NumberFormat("en-US");
 
 function Card({ country }) {
   return (
-    <div className="w-264 h-auto min-h-336 overflow-hidden rounded-6 shadow bg-light-surface dark:bg-dark-surface">
+    <div className="w-full h-auto min-h-336 overflow-hidden rounded-6 shadow bg-light-surface dark:bg-dark-surface">
       <Link href={`country/${country.alpha3Code.toLowerCase()}`} aria-label="show more">
-        <a className="w-full h-auto">
+        <a className="relative block w-full h-auto pt-60% xs:pt-0 xs:h-160">
           <img
-            className="w-full h-160 object-cover object-center"
+            className="absolute z-10 top-0 left-0 w-full h-full object-cover object-center"
             aria-hidden="true"
             draggable="false"
             src={country.flags.png}

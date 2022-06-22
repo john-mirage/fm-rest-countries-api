@@ -21,7 +21,7 @@ function Filter({ setRegion }) {
 
   return (
     <Listbox
-      className="relative w-200 h-48 rounded-6 bg-light-surface shadow dark:bg-dark-surface"
+      className="relative z-40 w-200 h-48 rounded-6 bg-light-surface shadow dark:bg-dark-surface"
       value={selectedRegion}
       onChange={handleRegionChange}
       as="div"
@@ -38,7 +38,7 @@ function Filter({ setRegion }) {
         leaveFrom="transform scale-100 opacity-100"
         leaveTo="transform scale-95 opacity-0"
       >
-        <Listbox.Options className="absolute z-50 -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
+        <Listbox.Options className="absolute -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
           {regions.map((region) => (
             <Listbox.Option
               className="px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text capitalize"

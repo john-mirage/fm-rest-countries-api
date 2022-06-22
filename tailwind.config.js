@@ -9,8 +9,10 @@ module.exports = {
   ],
   theme: {
     screens: {
-      sm: "375px",
-      lg: "1312px",
+      xs: "375px",
+      sm: "600px",
+      md: "936px",
+      lg: "1336px",
     },
     colors: {
       "transparent": "transparent",
@@ -67,6 +69,7 @@ module.exports = {
       "400": "25rem",
       "480": "30rem",
       "560": "35rem",
+      "60%": "60%",
       "border-countries": "calc(100% + 0.625rem)",
     },
     fontSize: {
@@ -88,6 +91,9 @@ module.exports = {
     },
     minHeight: {
       "336": "21rem",
+    },
+    maxWidth: {
+      "264": "16.5rem",
     },
     maxHeight: {
       "400": "25rem",

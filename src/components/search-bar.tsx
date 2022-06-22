@@ -26,7 +26,7 @@ function SearchBar({ countries }) {
 
   return (
     <Combobox
-      className="relative mb-40 w-full h-48 rounded-6 bg-light-surface shadow dark:bg-dark-surface lg:mb-0 lg:w-480"
+      className="relative z-50 mb-40 w-full h-48 rounded-6 bg-light-surface shadow dark:bg-dark-surface md:mb-0 md:w-480"
       value=""
       onChange={handleCombobox}
       as="div"
@@ -45,7 +45,7 @@ function SearchBar({ countries }) {
         leaveFrom="transform scale-100 opacity-100"
         leaveTo="transform scale-95 opacity-0"
       >
-        <Combobox.Options className="absolute z-50 -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
+        <Combobox.Options className="absolute -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
           {filteredCountries.map((country) => (
             <Combobox.Option
               key={country.alpha3Code}
