@@ -11,7 +11,7 @@ function Country({ country }) {
         </div>
       </div>
       <div className="text-light-text dark:text-dark-text lg:flex-1 lg:ml-40">
-        <h2 className="mb-24 text-22 font-700">{country.name}</h2>
+        <h2 className="mb-24 text-22 font-700 md:text-32">{country.name}</h2>
         <div className="sm:flex sm:flex-row sm:items-start">
           <div className="mb-48 sm:flex-1 sm:mr-16">
             <p className="mb-12 text-14 font-600">Native Name: <span className="font-300">{country.nativeName}</span></p>

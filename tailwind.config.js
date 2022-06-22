@@ -80,6 +80,7 @@ module.exports = {
       "18": ["1.125rem", { lineHeight: "1.5rem" }],
       "22": ["1.375rem", { lineHeight: "2rem" }],
       "24": ["1.5rem", { lineHeight: "1" }],
+      "32": ["2rem", { lineHeight: "1" }],
     },
     fontWeight: {
       "300": "300",

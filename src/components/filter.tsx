@@ -27,7 +27,7 @@ function Filter({ setRegion }) {
       as="div"
     >
       <Listbox.Button className="flex flex-row justify-between items-center px-24 w-full h-full text-light-text dark:text-dark-text">
-        <span className="text-12 font-400">{selectedRegion === "all" ? "Filter by region" : selectedRegion}</span>
+        <span className="text-12 font-400 md:text-14">{selectedRegion === "all" ? "Filter by region" : selectedRegion}</span>
         <ChevronDownIcon className="w-12 h-12" />
       </Listbox.Button>
       <Transition
@@ -38,10 +38,10 @@ function Filter({ setRegion }) {
         leaveFrom="transform scale-100 opacity-100"
         leaveTo="transform scale-95 opacity-0"
       >
-        <Listbox.Options className="absolute -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
+        <Listbox.Options className="absolute -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow-lg rounded-6 bg-light-surface dark:bg-dark-surface">
           {regions.map((region) => (
             <Listbox.Option
-              className="px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text capitalize"
+              className="px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text capitalize md:text-14"
               key={region}
               value={region}
             >

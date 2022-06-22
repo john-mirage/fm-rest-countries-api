@@ -24,11 +24,11 @@ function ThemeButton({theme, setTheme}) {
       className="flex flex-row items-center text-light-text dark:text-dark-text"
     >
       {enabled ? (
-        <MoonIconSolid className="w-16 h-16 mr-8"/>
+        <MoonIconSolid className="w-16 h-16 mr-8 md:w-18 md:h-18"/>
       ) : (
-        <MoonIconOutlined className="w-16 h-16 mr-8"/>
+        <MoonIconOutlined className="w-16 h-16 mr-8 md:w-18 md:h-18"/>
       )}
-      <span className="text-12 font-600">Dark Mode</span>
+      <span className="text-12 font-600 md:text-16">Dark Mode</span>
     </Switch>
   );
 }
