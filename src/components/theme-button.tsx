@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Switch } from "@headlessui/react";
 import { MoonIcon as MoonIconOutlined } from "@heroicons/react/outline";
 import { MoonIcon as MoonIconSolid } from "@heroicons/react/solid";
 
-function ThemeButton() {
+function ThemeButton({theme, setTheme}) {
   const [enabled, setEnabled] = useState(false);
 
+  useEffect(() => {
+    if (theme) {
+      setEnabled(theme === "dark");
+    }
+  }, [theme]);
+
   function handleSwitchToggle(isEnabled: boolean) {
-    document.documentElement.dataset.theme = isEnabled ? "dark" : "light";
+    setTheme(isEnabled ? "dark" : "light");
     setEnabled(isEnabled);
   }
 
