@@ -12,7 +12,7 @@ function IndexPage() {
   const [region, setRegion] = useState("all");
 
   const regionCountries = useMemo(() => {
-    if (region !== "all") {
+    if (!isLoading && !isError && region !== "all") {
       return countries.filter((country) => country.region === region);
     }
     return false;
