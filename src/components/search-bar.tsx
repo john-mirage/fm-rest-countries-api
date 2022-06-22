@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
-import { Combobox } from "@headlessui/react";
+import { Combobox, Transition } from "@headlessui/react";
 import { SearchIcon } from "@heroicons/react/outline";
 import Fuse from "fuse.js";
 import { useRouter } from "next/router";
@@ -37,21 +37,30 @@ function SearchBar({ countries }) {
         placeholder="Search a country"
         onChange={(event) => setQuery(event.target.value)}
       />
-      <Combobox.Options className="absolute z-50 -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
-        {filteredCountries.map((country) => (
-          <Combobox.Option
-            key={country.alpha3Code}
-            value={country}
-            as={Fragment}
-          >
-            {({ active }) => (
-              <li className={`px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text ${active ? "bg-light-element dark:bg-dark-element" : ""}`}>
-                { country.name }
-              </li>
-            )}
-          </Combobox.Option>
-        ))}
-      </Combobox.Options>
+      <Transition
+        enter="transition duration-100 ease-out"
+        enterFrom="transform scale-95 opacity-0"
+        enterTo="transform scale-100 opacity-100"
+        leave="transition duration-75 ease-out"
+        leaveFrom="transform scale-100 opacity-100"
+        leaveTo="transform scale-95 opacity-0"
+      >
+        <Combobox.Options className="absolute z-50 -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
+          {filteredCountries.map((country) => (
+            <Combobox.Option
+              key={country.alpha3Code}
+              value={country}
+              as={Fragment}
+            >
+              {({ active }) => (
+                <li className={`px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text ${active ? "bg-light-element dark:bg-dark-element" : ""}`}>
+                  {country.name}
+                </li>
+              )}
+            </Combobox.Option>
+          ))}
+        </Combobox.Options>
+      </Transition>
     </Combobox>
   );
 }

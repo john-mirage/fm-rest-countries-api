@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Listbox } from "@headlessui/react";
+import { Listbox, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
 
 const regions: string[] = [
@@ -30,17 +30,26 @@ function Filter({ setRegion }) {
         <span className="text-12 font-400">{selectedRegion === "all" ? "Filter by region" : selectedRegion}</span>
         <ChevronDownIcon className="w-12 h-12" />
       </Listbox.Button>
-      <Listbox.Options className="absolute z-50 -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
-        {regions.map((region) => (
-          <Listbox.Option
-            className="px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text capitalize"
-            key={region}
-            value={region}
-          >
-            { region }
-          </Listbox.Option>
-        ))}
-      </Listbox.Options>
+      <Transition
+        enter="transition duration-100 ease-out"
+        enterFrom="transform scale-95 opacity-0"
+        enterTo="transform scale-100 opacity-100"
+        leave="transition duration-75 ease-out"
+        leaveFrom="transform scale-100 opacity-100"
+        leaveTo="transform scale-95 opacity-0"
+      >
+        <Listbox.Options className="absolute z-50 -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow rounded-6 bg-light-surface dark:bg-dark-surface">
+          {regions.map((region) => (
+            <Listbox.Option
+              className="px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text capitalize"
+              key={region}
+              value={region}
+            >
+              { region }
+            </Listbox.Option>
+          ))}
+        </Listbox.Options>
+      </Transition>
     </Listbox>
   );
 }

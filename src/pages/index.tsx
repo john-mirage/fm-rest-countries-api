@@ -32,13 +32,8 @@ function IndexPage() {
         <ErrorNotification />
       ) : (
         <>
-          <ToolBar
-            countries={countries}
-            setRegion={setRegion}
-          />
-          <CardGroup
-            countries={regionCountries ? regionCountries : countries}
-          />
+          <ToolBar countries={countries} setRegion={setRegion}/>
+          <CardGroup countries={regionCountries ? regionCountries : countries}/>
         </>
       )}
     </>
