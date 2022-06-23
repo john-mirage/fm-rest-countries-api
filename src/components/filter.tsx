@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
 
@@ -41,11 +41,16 @@ function Filter({ setRegion }) {
         <Listbox.Options className="absolute -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow-lg rounded-6 bg-light-surface dark:bg-dark-surface">
           {regions.map((region) => (
             <Listbox.Option
-              className="px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text capitalize md:text-14"
               key={region}
               value={region}
+              as={Fragment}
+              disabled={selectedRegion === region}
             >
-              { region }
+              {({ active, selected }) => (
+                <li className={`px-24 py-8 text-12 font-400 capitalize text-light-text dark:text-dark-text cursor-pointer ${selected ? "bg-light-surface-hover dark:bg-dark-surface-hover text-light-text/30 dark:text-dark-text/30 cursor-default" : ""} ${active ? "bg-light-surface-hover dark:bg-dark-surface-hover" : ""} md:text-14`}>
+                  {region}
+                </li>
+              )}
             </Listbox.Option>
           ))}
         </Listbox.Options>

@@ -45,7 +45,7 @@ function SearchBar({ countries }) {
         leaveFrom="transform scale-100 opacity-100"
         leaveTo="transform scale-95 opacity-0"
       >
-        <Combobox.Options className="absolute -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto py-10 shadow-lg rounded-6 bg-light-surface dark:bg-dark-surface">
+        <Combobox.Options className="absolute -bottom-4 left-0 translate-y-full w-full max-h-400 overflow-auto styled-scrollbar py-10 shadow-lg rounded-6 bg-light-surface dark:bg-dark-surface">
           {filteredCountries.map((country) => (
             <Combobox.Option
               key={country.alpha3Code}
@@ -53,7 +53,7 @@ function SearchBar({ countries }) {
               as={Fragment}
             >
               {({ active }) => (
-                <li className={`px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text ${active ? "bg-light-element dark:bg-dark-element" : ""} md:text-14`}>
+                <li className={`px-24 py-8 text-12 font-400 text-light-text dark:text-dark-text cursor-pointer ${active ? "bg-light-surface-hover dark:bg-dark-surface-hover" : ""} md:text-14`}>
                   {country.name}
                 </li>
               )}

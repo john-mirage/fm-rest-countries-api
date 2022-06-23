@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .styled-scrollbar {
+    scrollbar-color: hsl(0, 0%, 85%) transparent;
+  }
+  [data-theme="dark"] .styled-scrollbar {
+    scrollbar-color: hsl(209, 23%, 40%) transparent;
+  }
+  .styled-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+  .styled-scrollbar::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 85%);
+    border-radius: 9999px;
+  }
+  [data-theme="dark"] .styled-scrollbar::-webkit-scrollbar-thumb {
+    background-color: hsl(209, 23%, 40%);
+  }
+  .styled-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
