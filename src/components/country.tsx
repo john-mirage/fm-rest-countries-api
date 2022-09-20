@@ -7,7 +7,7 @@ function Country({ country }) {
     <div className="md:w-568 md:mx-auto lg:w-full lg:mx-0 lg:flex lg:flex-row lg:justify-start lg:items-center">
       <div className="mb-48 md:w-560 lg:mb-0 lg:flex-none lg:mr-80">
         <div className="relative pt-60%">
-          <img className="absolute top-0 left-0 w-full h-full object-cover object-center" draggable="false" src={country.flags.svg} />
+          <img className="absolute top-0 left-0 w-full h-full object-cover object-center" draggable="false" src={country.flags.svg} alt={country.name} />
         </div>
       </div>
       <div className="text-light-text dark:text-dark-text lg:flex-1 lg:ml-40">

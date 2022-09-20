@@ -4,9 +4,8 @@ function Document() {
   return (
     <Html lang="en" dir="ltr" data-theme="light">
       <Head>
-        <meta charSet="UTF-8" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
         <meta name="title" content="REST Countries API"/>
         <meta name="description" content="Frontend mentor challenge solution for: REST Countries API"/>
