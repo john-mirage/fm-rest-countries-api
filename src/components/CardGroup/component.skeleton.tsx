@@ -1,5 +1,5 @@
 import { range } from "lodash";
-import CardSkeleton from "@components/skeleton/card-skeleton";
+import { CardSkeleton } from "@components/Card";
 
 function CardGroupSkeleton() {
   return (

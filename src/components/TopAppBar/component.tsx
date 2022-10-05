@@ -1,4 +1,4 @@
-import ThemeButton from "@components/theme-button";
+import { ThemeButton } from "@components/ThemeButton";
 
 function TopAppBar({theme, setTheme}) {
   return (

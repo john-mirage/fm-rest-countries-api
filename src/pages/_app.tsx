@@ -1,6 +1,6 @@
 import "@styles/global.css";
 import Head from "next/head";
-import Layout from "@components/layout";
+import { Layout } from "@components/Layout";
 import favicon from "@images/favicon.png";
 
 function App({ Component, pageProps }) {

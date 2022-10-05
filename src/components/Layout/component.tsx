@@ -1,4 +1,4 @@
-import TopAppBar from "@components/top-app-bar";
+import { TopAppBar } from "@components/TopAppBar";
 import useTheme from "@hooks/use-theme";
 
 function Layout({ children }) {

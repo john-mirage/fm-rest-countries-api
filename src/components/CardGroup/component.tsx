@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { InView } from "react-intersection-observer";
-import Card from "./card";
+import { Card } from "@components/Card";
 
 const COUNTRIES_PER_PAGE = 20;
 

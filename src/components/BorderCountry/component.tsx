@@ -1,7 +1,6 @@
 import useBorderCountry from "@hooks/use-border-country";
-import ErrorNotification from "@components/error-notification";
-import Button from "@components/button";
-import ButtonSkeleton from "@components/skeleton/button-skeleton";
+import { ErrorNotification } from "@components/ErrorNotification";
+import { Button, ButtonSkeleton } from "@components/Button";
 
 function BorderCountry({ borderCountryCode }) {
   const { borderCountry, isLoading, isError } = useBorderCountry(borderCountryCode as string);

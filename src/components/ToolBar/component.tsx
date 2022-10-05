@@ -1,5 +1,5 @@
-import Filter from "@components/filter";
-import SearchBar from "@components/search-bar";
+import { Filter } from "@components/Filter";
+import { SearchBar } from "@components/SearchBar";
 
 function ToolBar({ countries, setRegion }) {
   return (

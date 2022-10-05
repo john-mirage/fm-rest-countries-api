@@ -1,10 +1,8 @@
 import Head from "next/head";
-import ToolbarSkeleton from "@components/skeleton/tool-bar-skeleton";
-import CardGroupSkeleton from "@components/skeleton/card-group-skeleton";
-import ErrorNotification from "@components/error-notification";
+import { ToolBar, ToolbarSkeleton } from "@components/ToolBar";
+import { CardGroup, CardGroupSkeleton } from "@components/CardGroup";
+import { ErrorNotification } from "@components/ErrorNotification";
 import useCountries from "@hooks/use-countries";
-import ToolBar from "@components/tool-bar";
-import CardGroup from "@components/card-group";
 import { useMemo, useState } from "react";
 
 function IndexPage() {

@@ -1,4 +1,4 @@
-import BorderCountry from "@components/border-country";
+import { BorderCountry } from "@components/BorderCountry";
 
 const formatter = new Intl.NumberFormat("en-US");
 

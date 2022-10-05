@@ -1,5 +1,5 @@
-import SearchBarSkeleton from "@components/skeleton/search-bar-skeleton";
-import FilterSkeleton from "@components/skeleton/filter-skeleton";
+import { SearchBarSkeleton } from "@components/SearchBar";
+import { FilterSkeleton } from "@components/Filter";
 
 function ToolbarSkeleton() {
   return (
