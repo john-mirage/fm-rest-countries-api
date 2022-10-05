@@ -27,7 +27,7 @@ function IndexPage() {
           <CardGroupSkeleton />
         </>
       ) : isError ? (
-        <ErrorNotification />
+        <ErrorNotification message="The countries have not been found" />
       ) : (
         <>
           <ToolBar countries={countries} setRegion={setRegion}/>

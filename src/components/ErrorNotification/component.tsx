@@ -1,8 +1,12 @@
 import { FunctionComponent } from "react";
 
-const ErrorNotification: FunctionComponent = () => {
+interface Props {
+  message: string;
+}
+
+const ErrorNotification: FunctionComponent<Props> = ({ message }) => {
   return (
-    <div>Error</div>
+    <h2 className="mx-auto text-24 font-600 text-light-text sm:text-32 dark:text-dark-text">{message}</h2>
   );
 }
 

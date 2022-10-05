@@ -8,7 +8,7 @@ function useCountries() {
   return {
     countries: data,
     isLoading: !error && !data,
-    isError: error
+    isError: error !== undefined
   }
 }
 

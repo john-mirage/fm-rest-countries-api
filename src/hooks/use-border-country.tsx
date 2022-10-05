@@ -8,7 +8,7 @@ function useBorderCountry(borderCountryCode: string) {
   return {
     borderCountry: data,
     isLoading: !error && !data,
-    isError: error
+    isError: error !== undefined
   }
 }
 

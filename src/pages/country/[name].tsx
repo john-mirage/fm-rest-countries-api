@@ -26,7 +26,7 @@ function CountryPage() {
       {isLoading ? (
         <CountrySkeleton />
       ) : isError ? (
-        <ErrorNotification />
+        <ErrorNotification message="The country has not been found." />
       ) : (
         <Country country={country} />
       )}
