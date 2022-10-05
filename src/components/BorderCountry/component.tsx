@@ -15,7 +15,7 @@ const BorderCountry: FunctionComponent<Props> = ({ borderCountryCode }) => {
       {isLoading ? (
         <ButtonSkeleton />
       ) : isError ? (
-        <ErrorNotification />
+        <ErrorNotification message="The border country has not been found." />
       ) : (
         <Button borderCountry={borderCountry} />
       )}
