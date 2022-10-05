@@ -1,6 +1,10 @@
-import { Fragment, useState } from "react";
+import { Fragment, FunctionComponent, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
+
+interface Props {
+  setRegion: (newRegion: string) => void;
+}
 
 const regions: string[] = [
   "all",
@@ -11,7 +15,7 @@ const regions: string[] = [
   "Oceania"
 ];
 
-function Filter({ setRegion }) {
+const Filter: FunctionComponent<Props> = ({ setRegion }) => {
   const [selectedRegion, setSelectedRegion] = useState(regions[0]);
 
   function handleRegionChange(region: string) {

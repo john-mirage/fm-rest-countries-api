@@ -1,8 +1,13 @@
 import Link from "next/link";
+import { FunctionComponent } from "react";
+
+interface Props {
+  country: AppData.CardCountry;
+}
 
 const formatter = new Intl.NumberFormat("en-US");
 
-function Card({ country }) {
+const Card: FunctionComponent<Props> = ({ country }) => {
   return (
     <div className="w-full h-auto min-h-336 overflow-hidden rounded-6 shadow bg-light-surface dark:bg-dark-surface">
       <Link href={`country/${country.alpha3Code.toLowerCase()}`}>

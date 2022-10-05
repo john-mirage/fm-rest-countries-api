@@ -1,4 +1,6 @@
-function ErrorNotification() {
+import { FunctionComponent } from "react";
+
+const ErrorNotification: FunctionComponent = () => {
   return (
     <div>Error</div>
   );

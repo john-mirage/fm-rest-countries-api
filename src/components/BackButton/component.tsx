@@ -1,7 +1,8 @@
 import { ArrowNarrowLeftIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
+import { FunctionComponent } from "react";
 
-function BackButton() {
+const BackButton: FunctionComponent = () => {
   const router = useRouter();
 
   function handleClick() {

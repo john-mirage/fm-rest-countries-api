@@ -1,10 +1,14 @@
-import { useEffect, useMemo, useState } from "react";
+import { FunctionComponent, useEffect, useMemo, useState } from "react";
 import { InView } from "react-intersection-observer";
 import { Card } from "@components/Card";
 
+interface Props {
+  countries: AppData.CardCountry[];
+}
+
 const COUNTRIES_PER_PAGE = 20;
 
-function CardGroup({ countries }) {
+const CardGroup: FunctionComponent<Props> = ({ countries }) => {
   const [pageTotal, setPageTotal] = useState(0);
   const [page, setPage] = useState(0);
 

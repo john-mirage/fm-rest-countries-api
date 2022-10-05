@@ -1,4 +1,6 @@
-function CountrySkeleton() {
+import { FunctionComponent } from "react";
+
+const CountrySkeleton: FunctionComponent = () => {
   return (
     <div className="md:w-568 md:mx-auto lg:w-full lg:mx-0 lg:flex lg:flex-row lg:justify-start lg:items-center">
       <div className="animate-pulse mb-48 w-full lg:mb-0 lg:flex-none lg:mr-80 lg:w-560">

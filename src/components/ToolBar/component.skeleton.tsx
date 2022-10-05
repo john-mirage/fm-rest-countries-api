@@ -1,7 +1,8 @@
 import { SearchBarSkeleton } from "@components/SearchBar";
 import { FilterSkeleton } from "@components/Filter";
+import { FunctionComponent } from "react";
 
-function ToolbarSkeleton() {
+const ToolbarSkeleton: FunctionComponent = () => {
   return (
     <div className="mt-24 mb-32 md:mt-48 md:mb-48 lg:flex lg:flex-row lg:justify-between lg:items-center">
       <SearchBarSkeleton />

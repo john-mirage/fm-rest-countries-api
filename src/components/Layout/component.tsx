@@ -1,8 +1,9 @@
 import { TopAppBar } from "@components/TopAppBar";
 import useTheme from "@hooks/use-theme";
+import { FunctionComponent, PropsWithChildren } from "react";
 
-function Layout({ children }) {
-  const [theme, setTheme] = useTheme();
+const Layout: FunctionComponent<PropsWithChildren> = ({ children }) => {
+  const { theme, setTheme } = useTheme();
 
   return (
     <>

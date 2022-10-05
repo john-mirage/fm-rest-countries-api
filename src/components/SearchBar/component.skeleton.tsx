@@ -1,4 +1,6 @@
-function SearchBarSkeleton() {
+import { FunctionComponent } from "react";
+
+const SearchBarSkeleton: FunctionComponent = () => {
   return (
     <div className="mb-40 w-full h-48 rounded-6 bg-light-surface shadow dark:bg-dark-surface lg:mb-0 lg:w-480">
       <div className="animate-pulse flex flex-row justify-start items-center px-24 w-full h-full">

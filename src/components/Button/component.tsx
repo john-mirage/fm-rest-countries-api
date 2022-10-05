@@ -1,6 +1,11 @@
 import { useRouter } from "next/router";
+import { FunctionComponent } from "react";
 
-function Button({ borderCountry }) {
+interface Props {
+  borderCountry: AppData.BorderCountry;
+}
+
+const Button: FunctionComponent<Props> = ({ borderCountry }) => {
   const router = useRouter();
 
   function handleClick() {

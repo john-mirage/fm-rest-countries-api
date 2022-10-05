@@ -1,8 +1,13 @@
 import { BorderCountry } from "@components/BorderCountry";
+import { FunctionComponent } from "react";
+
+interface Props {
+  country: AppData.Country;
+}
 
 const formatter = new Intl.NumberFormat("en-US");
 
-function Country({ country }) {
+const Country: FunctionComponent<Props> = ({ country }) => {
   return (
     <div className="md:w-568 md:mx-auto lg:w-full lg:mx-0 lg:flex lg:flex-row lg:justify-start lg:items-center">
       <div className="mb-48 md:w-560 lg:mb-0 lg:flex-none lg:mr-80">

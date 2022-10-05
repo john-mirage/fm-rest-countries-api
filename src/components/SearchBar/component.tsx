@@ -1,14 +1,18 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, FunctionComponent, useEffect, useState } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import { SearchIcon } from "@heroicons/react/outline";
 import Fuse from "fuse.js";
 import { useRouter } from "next/router";
 
+interface Props {
+  countries: AppData.Country[];
+}
+
 const fuse = new Fuse([], {
   keys: ["name"]
 });
 
-function SearchBar({ countries }) {
+const SearchBar: FunctionComponent<Props> = ({ countries }) => {
   const router = useRouter();
   const [query, setQuery] = useState("");
 

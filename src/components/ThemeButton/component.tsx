@@ -1,10 +1,15 @@
-import { useEffect, useState } from "react";
+import { Dispatch, FunctionComponent, SetStateAction, useEffect, useState } from "react";
 import { Switch } from "@headlessui/react";
 import { MoonIcon as MoonIconOutlined } from "@heroicons/react/outline";
 import { MoonIcon as MoonIconSolid } from "@heroicons/react/solid";
 
-function ThemeButton({theme, setTheme}) {
-  const [enabled, setEnabled] = useState(false);
+interface Props {
+  theme: string;
+  setTheme: Dispatch<SetStateAction<string>>;
+}
+
+const ThemeButton: FunctionComponent<Props> = ({theme, setTheme}) => {
+  const [enabled, setEnabled] = useState<boolean>(false);
 
   useEffect(() => {
     if (theme) {

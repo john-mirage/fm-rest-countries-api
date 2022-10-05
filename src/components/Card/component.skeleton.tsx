@@ -1,4 +1,6 @@
-function CardSkeleton() {
+import { FunctionComponent } from "react";
+
+const CardSkeleton: FunctionComponent = () => {
   return (
     <li className="mb-40 w-264 h-auto min-h-336 overflow-hidden rounded-6 shadow bg-light-surface dark:bg-dark-surface lg:mb-[75px]">
       <div className="animate-pulse">
